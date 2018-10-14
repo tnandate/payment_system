@@ -1,0 +1,9 @@
+bums:
+  name: "Bleacher Bums"
+  description: "A Play About Bleacher Bums"
+  image_url: "http://example.com"
+
+romeo:
+  name: "Romeo and Juliet"
+  description: "A play about Romeo and Juliet"
+  image_url: "http://example.com"

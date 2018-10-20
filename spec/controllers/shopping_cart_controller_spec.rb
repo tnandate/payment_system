@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ShoppingCartsController do
   describe '#update' do
-    let(:user) { instance_spy(:user) }
+    let(:user) { instance_spy(User) }
     let(:performance) { instance_spy(
       Performance, event: build_stubbed(:event)) }
     let(:action) { instance_spy(AddsToCart) }
@@ -23,7 +23,7 @@ describe ShoppingCartsController do
 
     it 'redirects back to the event if unsuccessful' do
       allow(action).to receive(:success).and_return(false)
-      patch :update, params: { performance_id: '2', ticket_count: '2' }
+      patch :update, params: { performance_id: '2', ticket_count: '1' }
       expect(action).to have_received(:run)
       expect(@controller).to redirect_to(performance.event)
     end

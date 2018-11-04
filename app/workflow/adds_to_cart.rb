@@ -1,11 +1,10 @@
 class AddsToCart
-
   attr_accessor :user, :performance, :count, :success
 
   def initialize(user:, performance:, count:)
     @user        = user
     @performance = performance
-    @count       = count
+    @count       = count.to_i
     @success     = false
   end
 

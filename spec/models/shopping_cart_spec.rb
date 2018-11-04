@@ -25,7 +25,7 @@ describe ShoppingCart do
   end
 
   it 'gets performances for event' do
-    expect(cart.performance_for(romeo)).to eq([romeo_performance])
+    expect(cart.performances_for(romeo)).to eq([romeo_performance])
   end
 
   it 'calculates entire total' do

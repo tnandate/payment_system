@@ -23,7 +23,7 @@ class ShoppingCart
     end
   end
 
-  def performance_for(event)
+  def performances_for(event)
     tickets.map(&:performance)
       .select { |performance| performance.event == event }
       .uniq.sort_by(&:start_time)

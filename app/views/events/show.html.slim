@@ -4,7 +4,7 @@ h2 Available Performances
 - @event.performances.each do |performance|
   div(id=dom_id(performance))
     .row
-      = form_tag(shopping_cart_path, method: :patch) do
+      = form_with(url: shopping_cart_path, method: :patch) do
         = hidden_field_tag("performance_id", performance.id)
         .col-md-2
           h4= performance.start_time.to_date.to_s(:long)

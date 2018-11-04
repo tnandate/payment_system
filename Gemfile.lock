@@ -42,14 +42,32 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     ast (2.4.0)
+    autoprefixer-rails (9.1.4)
+      execjs
+    awesome_print (1.8.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
+    capybara (3.7.2)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      xpath (~> 3.1)
+    capybara-screenshot (1.0.21)
+      capybara (>= 1.0, < 4)
+      launchy
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -69,7 +87,7 @@ GEM
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
-    factory_bot (4.11.1)
+    factory_bot (4.10.0)
       activesupport (>= 3.0.0)
     ffi (1.9.25)
     globalid (0.4.1)
@@ -80,6 +98,12 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jquery-rails (4.3.3)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -96,6 +120,15 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
+    monetize (1.9.0)
+      money (~> 6.12)
+    money (6.13.1)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.13.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.9.0)
+      money (~> 6.13.0)
+      railties (>= 3.0)
     msgpack (1.2.4)
     multi_json (1.13.1)
     nio4r (2.3.1)
@@ -118,6 +151,7 @@ GEM
       yard (~> 0.9.11)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
+    public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)
     rack-test (1.1.0)
@@ -238,19 +272,27 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    xpath (3.1.0)
+      nokogiri (~> 1.8)
     yard (0.9.16)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootsnap (>= 1.1.0)
+  bootstrap-sass
   byebug
+  capybara
+  capybara-screenshot
   coffee-rails (~> 4.2)
   devise
   factory_bot
   jbuilder (~> 2.5)
+  jquery-rails
   listen (>= 3.0.5, < 3.2)
+  money-rails (~> 1.12)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-doc

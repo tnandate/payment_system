@@ -18,6 +18,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'slim-rails'
 gem 'simple_form'
+# undefined method normalize_formatting_rules' for #`
+# check https://github.com/RubyMoney/money-rails/issues/524
+gem 'money-rails', '~>1.12'
+gem 'awesome_print'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -40,6 +46,8 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'factory_bot', require: false
+  gem 'capybara'
+  gem 'capybara-screenshot'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

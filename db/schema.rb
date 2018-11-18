@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_17_143144) do
+ActiveRecord::Schema.define(version: 2018_11_17_143606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 2018_11_17_143144) do
     t.string "image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "payment_line_items", force: :cascade do |t|
+    t.bigint "payment_id"
+    t.string "buyable_type"
+    t.bigint "buyable_id"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyable_type", "buyable_id"], name: "index_payment_line_items_on_buyable_type_and_buyable_id"
+    t.index ["payment_id"], name: "index_payment_line_items_on_payment_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -72,6 +84,7 @@ ActiveRecord::Schema.define(version: 2018_11_17_143144) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "payment_line_items", "payments"
   add_foreign_key "payments", "users"
   add_foreign_key "performances", "events"
   add_foreign_key "tickets", "performances"

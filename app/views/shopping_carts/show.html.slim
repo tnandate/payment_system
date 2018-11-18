@@ -23,7 +23,7 @@ h2 Checkout
 
 h3 Credit Card Info
 
-= form_with(url: "#", class: "form-inline") do |f|
+= form_with(url: payments_path, class: "form-inline") do |f|
   = hidden_field_tag(:purchase_amount_cents, @cart.total_cost.cents)
   .form_group
     = f.label :credit_card_number, "Credit Card Number", class: "sr-only"

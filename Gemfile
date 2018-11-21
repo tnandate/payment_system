@@ -25,6 +25,9 @@ gem 'awesome_print'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 
+gem 'dotenv-rails'
+gem 'stripe'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
@@ -48,6 +51,8 @@ group :test do
   gem 'factory_bot', require: false
   gem 'capybara'
   gem 'capybara-screenshot'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

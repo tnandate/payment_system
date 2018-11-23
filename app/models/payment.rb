@@ -2,12 +2,12 @@ class Payment < ApplicationRecord
   include HasReference
 
   belongs_to :user
-  has_many :payment_line_items
+  has_many :payment_line_items, dependent: :destroy
   has_many :tickets, through: :payment_line_items, source_type: "Ticket",  source: "buyable"
 
   monetize :price_cents
 
-  enum status: [:created, :succeeded]
+  enum status: { created: 0, succeeded: 1 }
 
   def total_cost
     tickets.map(&:price).sum

@@ -1,127 +1,327 @@
-AllCops:
+Metrics/BlockLength:
   Exclude:
-    - "db/schema.rb" # You can't touch this
-    - ".bundle/**/*" # Auto-generated
-    - "bin/**/*"     # Auto-generated
-    - "vendor/**/*"  # We cannot solve the world's problems
-  TargetRubyVersion: 2.3
+    - spec/**/*.rb
+    - config/**/*.rb
+    - db/migrate/*.rb
+    - lib/tasks/**/*.rake
+    - Gemfile
+
+Metrics/LineLength:
+  AllowHeredoc: true
+  AllowURI: true
+  Max: 120
+  Exclude:
+    - spec/**/*
 
 Rails:
   Enabled: true
 
-Metrics/AbcSize:
+Naming/AccessorMethodName:
   Enabled: false
 
-Metrics/LineLength:
-  Max: 80
+Rails/ActionFilter:
+  Enabled: false
 
-Metrics/BlockLength:
+Style/Alias:
+  Enabled: false
+
+Style/ArrayJoin:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Naming/AsciiIdentifiers:
+  Enabled: false
+
+Style/Attr:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Style/CaseEquality:
+  Enabled: false
+
+Style/CharacterLiteral:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
   Enabled: false
 
 Metrics/ClassLength:
   Enabled: false
 
+Style/ClassVars:
+  Enabled: false
+
+Style/CollectionMethods:
+  PreferredMethods:
+    find: false
+    reduce: inject
+    collect: map
+    find_all: false
+
+Style/ColonMethodCall:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Rails/Delegate:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/EvenOdd:
+  Enabled: false
+
+Naming/FileName:
+  Enabled: false
+
+Style/FlipFlop:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/IfWithSemicolon:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
+
+Style/InlineComment:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/LineEndConcatenation:
+  Enabled: false
+
 Metrics/MethodLength:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/NegatedWhile:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/NilComparison:
+  Enabled: false
+
+Style/Not:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/OneLineConditional:
+  Enabled: false
+
+Style/ParallelAssignment:
   Enabled: false
 
 Metrics/ParameterLists:
   Enabled: false
 
-Style/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
-  IndentationWidth: 4
-
-Style/CaseEquality:
+Style/PerlBackrefs:
   Enabled: false
 
-Style/ClassAndModuleChildren:
-  Exclude:
-    - "app/controllers/**/*"
-    - "app/helpers/**/*"
+Naming/PredicateName:
+  NamePrefixBlacklist:
+    - is_
 
-Style/EmptyLinesAroundBlockBody:
-  Exclude:
-    - "spec/**/*"
-    - "lib/tasks/*.rake"
-
-Style/EmptyLinesAroundClassBody:
-  EnforcedStyle: empty_lines
-
-Style/EmptyLinesAroundModuleBody:
-  EnforcedStyle: empty_lines
-
-Style/FirstParameterIndentation:
-  IndentationWidth: 4
-
-Style/FrozenStringLiteralComment:
+Style/Proc:
   Enabled: false
 
-Style/IndentArray:
-  IndentationWidth: 4
+Style/RaiseArgs:
+  Enabled: false
 
-Style/IndentAssignment:
-  IndentationWidth: 4
+Style/RegexpLiteral:
+  Enabled: false
 
-Style/IndentHash:
-  IndentationWidth: 4
+Style/SelfAssignment:
+  Enabled: false
 
-Style/MultilineMethodCallBraceLayout:
-  EnforcedStyle: same_line
+Style/SingleLineBlockParams:
+  Enabled: false
 
-Style/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-  IndentationWidth: 4
-
-Style/MultilineHashBraceLayout:
-  EnforcedStyle: same_line
-
-Style/MultilineOperationIndentation:
-  EnforcedStyle: indented
-  IndentationWidth: 4
+Style/SingleLineMethods:
+  Enabled: false
 
 Style/SignalException:
-  EnforcedStyle: only_raise
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
-Style/TrivialAccessors:
-  ExactNameMatch: true
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: no_comma
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
   EnforcedStyleForMultiline: no_comma
 
 Style/TrailingCommaInArguments:
+  Enabled: true
   EnforcedStyleForMultiline: no_comma
 
-Style/SpaceInsideBlockBraces:
-  EnforcedStyle: space
-  EnforcedStyleForEmptyBraces: no_space
-  SpaceBeforeBlockParameters: true
+Style/FormatStringToken:
+  EnforcedStyle: template
 
-Style/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
-  EnforcedStyleForEmptyBraces: no_space
-
-Style/Documentation:
+Style/TrivialAccessors:
   Enabled: false
 
-Style/BlockDelimiters:
-  Exclude:
-    - "spec/**/*" # because let statements use braces for multiline blocks
+Lint/UnusedMethodArgument:
+  Enabled: false
 
-Style/BlockEndNewline:
-  Exclude:
-    - "spec/**/*" # because let statements use braces for multiline blocks
+Naming/VariableNumber:
+  Enabled: false
 
-Style/MultilineBlockLayout:
-  Exclude:
-    - "spec/**/*" # because let statements use braces for multiline blocks
+Style/VariableInterpolation:
+  Enabled: false
 
-Style/Semicolon:
-  AllowAsExpressionSeparator: true
-  Exclude:
-    - "spec/**/*" # because sometimes we use this in expect or then blocks
+Style/WhenThen:
+  Enabled: false
 
-Style/RaiseArgs:
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Lint/AmbiguousOperator:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Layout/ConditionPosition:
+  Enabled: false
+
+Lint/DeprecatedClassMethods:
+  Enabled: false
+
+Lint/ElseLayout:
+  Enabled: false
+
+Lint/HandleExceptions:
+  Enabled: false
+
+Lint/LiteralInInterpolation:
+  Enabled: false
+
+Lint/Loop:
+  Enabled: false
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
+
+Performance/RedundantMerge:
+  Enabled: false
+
+Performance/TimesMap:
+  Enabled: false
+
+Lint/RequireParentheses:
+  Enabled: false
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+
+Lint/Void:
+  Enabled: true
+
+Lint/UselessAssignment:
+  Exclude:
+    - spec/**/*
+
+Layout/EmptyLines:
+  Exclude:
+    - spec/**/*
+
+Style/NumericPredicate:
+  EnforcedStyle: comparison
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    "%":  ()
+    "%i": ()
+    "%q": ()
+    "%Q": ()
+    "%r": "{}"
+    "%s": ()
+    "%w": ()
+    "%W": ()
+    "%x": ()
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Rails/Output:
+  Enabled: true
+  Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - db/**/*.rb
+    - lib/**/*.rb
+    - spec/**/*.rb
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
+
+Rails/DynamicFindBy:
   Enabled: false

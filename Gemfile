@@ -43,7 +43,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
 
-  gem 'rubocop'
+  gem 'pre-commit', require: false
+  gem 'rubocop', require: false
 end
 
 group :test do

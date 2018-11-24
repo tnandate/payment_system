@@ -28,6 +28,9 @@ gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'stripe'
 
+gem 'babel-transpiler'
+gem 'sprockets'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 

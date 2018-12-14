@@ -55,6 +55,7 @@ group :test do
   gem 'factory_bot', require: false
   gem 'capybara'
   gem 'capybara-screenshot'
+  gem 'poltergeist'
   gem 'vcr'
   gem 'webmock'
 end

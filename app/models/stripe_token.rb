@@ -1,6 +1,5 @@
 class StripeToken
   attr_accessor :credit_card_number, :expiration_month, :expiration_year, :cvc, :stripe_token
-  delegate :id, to: :token
 
   def initialize(credit_card_number: nil, expiration_month: nil, expiration_year: nil, cvc: nil, stripe_token: nil)
     @credit_card_number = credit_card_number

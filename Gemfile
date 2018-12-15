@@ -56,6 +56,10 @@ group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'poltergeist'
+  gem 'fake_stripe'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'sinatra'
   gem 'vcr'
   gem 'webmock'
 end
